@@ -480,8 +480,7 @@ const awards = [
     {
         "year": "2026",
         "title": "Scholarship of Excellence",
-        "organization": "Technische Universität Darmstadt
-",
+        "organization": "Technische Universität Darmstadt",
         "description": "Awarded EUR 3,099."
     },
     {
