@@ -1,48 +1,837 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ran Chen</title>
+
+    <meta name="description"
+        content="Personal academic and engineering portfolio of Ran Chen. Research, projects, coursework, awards, skills, and CV.">
+
+    <meta name="author" content="Ran Chen">
+
+    <meta name="theme-color" content="#070b12">
+
+    <title>Ran Chen | Engineering & Research</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <header>
-        <h1>Ran Chen</h1>
-        <p>Mechanical Engineering | University of Illinois Urbana-Champaign</p>
+    <!-- =========================================================
+         BACKGROUND
+    ========================================================== -->
+
+    <div class="background-effects" aria-hidden="true">
+        <div class="background-grid"></div>
+        <div class="glow glow-one"></div>
+        <div class="glow glow-two"></div>
+    </div>
+
+
+    <!-- =========================================================
+         NAVIGATION
+    ========================================================== -->
+
+    <header class="site-header">
+
+        <nav class="navbar container">
+
+            <a href="#home" class="logo" aria-label="Ran Chen home">
+                RC<span>.</span>
+            </a>
+
+            <div class="nav-links" id="navLinks">
+
+                <a href="#about">About</a>
+                <a href="#projects">Research</a>
+                <a href="#courses">Courses</a>
+                <a href="#awards">Awards</a>
+                <a href="#skills">Skills</a>
+                <a href="#cv">CV</a>
+
+            </div>
+
+            <div class="nav-actions">
+
+                <button
+                    class="theme-toggle"
+                    id="themeToggle"
+                    aria-label="Change color theme"
+                    title="Change theme">
+
+                    <span id="themeIcon">☀</span>
+
+                </button>
+
+                <button
+                    class="mobile-menu-button"
+                    id="mobileMenuButton"
+                    aria-label="Open navigation menu">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </button>
+
+            </div>
+
+        </nav>
+
     </header>
 
+
     <main>
-        <section>
-            <h2>About Me</h2>
-            <p>
-                Welcome to my personal website.
-            </p>
+
+
+        <!-- =====================================================
+             HERO / HOME
+        ====================================================== -->
+
+        <section id="home" class="hero">
+
+            <div class="container hero-layout">
+
+                <div class="hero-content">
+
+                    <div class="eyebrow reveal">
+                        <span class="status-dot"></span>
+                        Engineering · Research · Computation
+                    </div>
+
+                    <p class="hero-intro reveal">
+                        Hello, I'm
+                    </p>
+
+                    <h1 class="hero-title reveal">
+                        Ran Chen<span>.</span>
+                    </h1>
+
+                    <h2 class="hero-subtitle reveal">
+                        Mechanical Engineering
+                        <span class="gradient-text">
+                            & Computational Research
+                        </span>
+                    </h2>
+
+                    <p class="hero-description reveal">
+                        I work at the intersection of engineering,
+                        fluid mechanics, computation, experimentation,
+                        and scientific discovery.
+                    </p>
+
+                    <div class="hero-buttons reveal">
+
+                        <a href="#projects" class="button button-primary">
+                            Explore my work
+                            <span>→</span>
+                        </a>
+
+                        <a
+                            href="assets/Ran_Chen_CV.pdf"
+                            target="_blank"
+                            class="button button-secondary">
+
+                            View CV
+                            <span>↗</span>
+                        </a>
+
+                    </div>
+
+                    <div class="hero-links reveal">
+
+                        <!-- Replace these links -->
+                        <a href="https://github.com/ranchen66" target="_blank">
+                            GitHub ↗
+                        </a>
+
+                        <a href="#" target="_blank">
+                            LinkedIn ↗
+                        </a>
+
+                        <a href="mailto:YOUR_EMAIL@illinois.edu">
+                            Email ↗
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Hero visual -->
+
+                <div class="hero-visual reveal">
+
+                    <div class="orbit orbit-outer"></div>
+                    <div class="orbit orbit-middle"></div>
+                    <div class="orbit orbit-inner"></div>
+
+                    <div class="hero-core">
+
+                        <div class="core-label">
+                            RC
+                        </div>
+
+                        <div class="core-subtitle">
+                            ENGINEERING
+                        </div>
+
+                    </div>
+
+                    <div class="floating-tag tag-one">
+                        CFD
+                    </div>
+
+                    <div class="floating-tag tag-two">
+                        HPC
+                    </div>
+
+                    <div class="floating-tag tag-three">
+                        RESEARCH
+                    </div>
+
+                    <div class="floating-tag tag-four">
+                        EXPERIMENT
+                    </div>
+
+                </div>
+
+            </div>
+
+            <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+                <span>SCROLL</span>
+                <div class="scroll-line"></div>
+            </a>
+
         </section>
 
-        <section>
-            <h2>Research</h2>
-            <p>
-                My research interests include fluid mechanics,
-                computational fluid dynamics, and multiphase flow.
-            </p>
+
+
+        <!-- =====================================================
+             ABOUT
+        ====================================================== -->
+
+        <section id="about" class="section">
+
+            <div class="container">
+
+                <div class="section-heading reveal">
+
+                    <p class="section-number">
+                        01 / ABOUT
+                    </p>
+
+                    <h2>
+                        Engineer. Researcher.
+                        <span>Problem solver.</span>
+                    </h2>
+
+                </div>
+
+
+                <div class="about-grid">
+
+                    <div class="about-main reveal">
+
+                        <p class="about-lead">
+                            I am an engineering student interested in
+                            understanding complex physical systems using
+                            computational, theoretical, and experimental methods.
+                        </p>
+
+                        <p>
+                            My interests span fluid mechanics, computational
+                            fluid dynamics, multiphase systems, scientific
+                            computing, high-performance computing, and
+                            data-driven modeling.
+                        </p>
+
+                        <p>
+                            I enjoy problems where mathematics, physics,
+                            computation, and engineering design meet.
+                        </p>
+
+                    </div>
+
+
+                    <div class="about-details reveal">
+
+                        <div class="detail-item">
+
+                            <span class="detail-label">
+                                LOCATION
+                            </span>
+
+                            <span class="detail-value">
+                                Champaign, Illinois
+                            </span>
+
+                        </div>
+
+                        <div class="detail-item">
+
+                            <span class="detail-label">
+                                FIELD
+                            </span>
+
+                            <span class="detail-value">
+                                Mechanical Engineering
+                            </span>
+
+                        </div>
+
+                        <div class="detail-item">
+
+                            <span class="detail-label">
+                                INTERESTS
+                            </span>
+
+                            <span class="detail-value">
+                                Fluid Mechanics · CFD · Scientific Computing
+                            </span>
+
+                        </div>
+
+                        <div class="detail-item">
+
+                            <span class="detail-label">
+                                CURRENTLY
+                            </span>
+
+                            <span class="detail-value">
+                                Undergraduate Research
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
         </section>
 
-        <section>
-            <h2>Projects</h2>
-            <p>Research and engineering projects will be listed here.</p>
+
+
+        <!-- =====================================================
+             EDUCATION
+        ====================================================== -->
+
+        <section id="education" class="section section-alt">
+
+            <div class="container">
+
+                <div class="section-heading reveal">
+
+                    <p class="section-number">
+                        02 / EDUCATION
+                    </p>
+
+                    <h2>
+                        Academic
+                        <span>background.</span>
+                    </h2>
+
+                </div>
+
+
+                <article class="education-card reveal">
+
+                    <div class="education-year">
+                        PRESENT
+                    </div>
+
+                    <div class="education-content">
+
+                        <h3>
+                            University of Illinois Urbana-Champaign
+                        </h3>
+
+                        <p class="education-degree">
+                            B.S. Mechanical Engineering
+                        </p>
+
+                        <p class="education-description">
+                            Undergraduate studies emphasizing engineering
+                            mechanics, fluid mechanics, thermodynamics,
+                            applied mathematics, scientific computing,
+                            and research.
+                        </p>
+
+                    </div>
+
+                    <div class="education-stats">
+
+                        <div>
+
+                            <span class="stat-number">
+                                4.00
+                            </span>
+
+                            <span class="stat-label">
+                                GPA / 4.00
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
         </section>
 
-        <section>
-            <h2>Contact</h2>
-            <p>
-                Email: your-email@illinois.edu
-            </p>
+
+
+        <!-- =====================================================
+             RESEARCH / PROJECTS
+        ====================================================== -->
+
+        <section id="projects" class="section">
+
+            <div class="container">
+
+                <div class="section-heading reveal">
+
+                    <p class="section-number">
+                        03 / RESEARCH & PROJECTS
+                    </p>
+
+                    <h2>
+                        Selected
+                        <span>work.</span>
+                    </h2>
+
+                    <p class="section-description">
+                        Research and engineering projects exploring computation,
+                        experimentation, and complex physical systems.
+                    </p>
+
+                </div>
+
+
+                <div id="projectsGrid" class="projects-grid">
+
+                    <!-- Generated automatically by data.js -->
+
+                </div>
+
+            </div>
+
         </section>
+
+
+
+        <!-- =====================================================
+             COURSES
+        ====================================================== -->
+
+        <section id="courses" class="section section-alt">
+
+            <div class="container">
+
+                <div class="section-heading reveal">
+
+                    <p class="section-number">
+                        04 / COURSEWORK
+                    </p>
+
+                    <h2>
+                        Academic
+                        <span>coursework.</span>
+                    </h2>
+
+                </div>
+
+
+                <div class="course-summary reveal">
+
+                    <div class="summary-item">
+
+                        <span class="summary-value" id="courseCount">
+                            0
+                        </span>
+
+                        <span class="summary-label">
+                            Courses
+                        </span>
+
+                    </div>
+
+                    <div class="summary-item">
+
+                        <span class="summary-value">
+                            4.00
+                        </span>
+
+                        <span class="summary-label">
+                            GPA
+                        </span>
+
+                    </div>
+
+                    <div class="summary-item">
+
+                        <span class="summary-value">
+                            ME
+                        </span>
+
+                        <span class="summary-label">
+                            Major
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="course-controls reveal">
+
+                    <button class="course-filter active" data-category="All">
+                        All
+                    </button>
+
+                    <button class="course-filter" data-category="Engineering">
+                        Engineering
+                    </button>
+
+                    <button class="course-filter" data-category="Math">
+                        Mathematics
+                    </button>
+
+                    <button class="course-filter" data-category="Computing">
+                        Computing
+                    </button>
+
+                    <button class="course-filter" data-category="Science">
+                        Science
+                    </button>
+
+                </div>
+
+
+                <div class="course-table-container reveal">
+
+                    <table class="course-table">
+
+                        <thead>
+
+                            <tr>
+                                <th>Course</th>
+                                <th>Title</th>
+                                <th>Semester</th>
+                                <th>Category</th>
+                                <th>Grade</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="courseTableBody">
+
+                            <!-- Generated automatically -->
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             AWARDS
+        ====================================================== -->
+
+        <section id="awards" class="section">
+
+            <div class="container">
+
+                <div class="section-heading reveal">
+
+                    <p class="section-number">
+                        05 / AWARDS
+                    </p>
+
+                    <h2>
+                        Awards &
+                        <span>scholarships.</span>
+                    </h2>
+
+                </div>
+
+
+                <div id="awardsTimeline" class="awards-timeline">
+
+                    <!-- Generated automatically -->
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             SKILLS
+        ====================================================== -->
+
+        <section id="skills" class="section section-alt">
+
+            <div class="container">
+
+                <div class="section-heading reveal">
+
+                    <p class="section-number">
+                        06 / SKILLS
+                    </p>
+
+                    <h2>
+                        Technical
+                        <span>toolkit.</span>
+                    </h2>
+
+                </div>
+
+
+                <div id="skillsGrid" class="skills-grid">
+
+                    <!-- Generated automatically -->
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             CV
+        ====================================================== -->
+
+        <section id="cv" class="section">
+
+            <div class="container">
+
+                <div class="cv-card reveal">
+
+                    <div>
+
+                        <p class="section-number">
+                            07 / CURRICULUM VITAE
+                        </p>
+
+                        <h2>
+                            Want the
+                            <span>full picture?</span>
+                        </h2>
+
+                        <p>
+                            My CV contains additional details about research,
+                            education, projects, experience, presentations,
+                            technical skills, and awards.
+                        </p>
+
+                    </div>
+
+
+                    <div class="cv-actions">
+
+                        <a
+                            href="assets/Ran_Chen_CV.pdf"
+                            target="_blank"
+                            class="button button-primary">
+
+                            Open CV
+                            <span>↗</span>
+
+                        </a>
+
+                        <a
+                            href="assets/Ran_Chen_CV.pdf"
+                            download
+                            class="button button-secondary">
+
+                            Download PDF
+                            <span>↓</span>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             CONTACT
+        ====================================================== -->
+
+        <section id="contact" class="section contact-section">
+
+            <div class="container">
+
+                <div class="contact-content reveal">
+
+                    <p class="section-number">
+                        08 / CONTACT
+                    </p>
+
+                    <h2>
+                        Let's build something
+                        <span>interesting.</span>
+                    </h2>
+
+                    <p>
+                        I'm always interested in research,
+                        engineering, and collaboration opportunities.
+                    </p>
+
+
+                    <a
+                        class="contact-email"
+                        href="mailto:YOUR_EMAIL@illinois.edu">
+
+                        YOUR_EMAIL@illinois.edu
+                        <span>↗</span>
+
+                    </a>
+
+
+                    <div class="contact-links">
+
+                        <a
+                            href="https://github.com/ranchen66"
+                            target="_blank">
+                            GitHub
+                        </a>
+
+                        <a
+                            href="#"
+                            target="_blank">
+                            LinkedIn
+                        </a>
+
+                        <a
+                            href="#"
+                            target="_blank">
+                            Google Scholar
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
     </main>
 
+
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================== -->
+
+    <footer>
+
+        <div class="container footer-content">
+
+            <span>
+                © <span id="currentYear"></span> Ran Chen
+            </span>
+
+            <span>
+                Designed & built by Ran Chen
+            </span>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =========================================================
+         PROJECT MODAL
+    ========================================================== -->
+
+    <div class="modal-overlay" id="projectModal">
+
+        <div class="project-modal">
+
+            <button
+                id="modalClose"
+                class="modal-close"
+                aria-label="Close project">
+
+                ×
+
+            </button>
+
+            <p class="modal-category" id="modalCategory"></p>
+
+            <h2 id="modalTitle"></h2>
+
+            <p class="modal-description" id="modalDescription"></p>
+
+            <div id="modalTags" class="project-tags"></div>
+
+            <div class="modal-section">
+
+                <h3>
+                    Overview
+                </h3>
+
+                <p id="modalOverview"></p>
+
+            </div>
+
+            <div class="modal-section">
+
+                <h3>
+                    My Contribution
+                </h3>
+
+                <p id="modalContribution"></p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================================================
+         JAVASCRIPT
+    ========================================================== -->
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+
 </body>
+
 </html>
