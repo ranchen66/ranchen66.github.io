@@ -717,87 +717,72 @@ initializeRevealAnimations();
 
 
 
-/* ============================================================
-   ACTIVE NAVIGATION SECTION
-============================================================ */
+/* TAB NAVIGATION — hashes preserve direct links and browser history. */
+const panels = [...document.querySelectorAll("main > section[id]")];
+const navigationLinks = [...navLinks.querySelectorAll("a")];
 
-const sections =
-    document.querySelectorAll(
-        "main section[id]"
-    );
-
-
-const navigationLinks =
-    document.querySelectorAll(
-        ".nav-links a"
-    );
-
-
-function updateActiveNavigation() {
-
-    let currentSection =
-        "";
-
-
-    sections.forEach(
-        section => {
-
-            const sectionTop =
-                section.offsetTop;
-
-
-            if (
-                window.scrollY
-                >=
-                sectionTop - 180
-            ) {
-
-                currentSection =
-                    section.id;
-
-            }
-
-        }
-    );
-
-
-    navigationLinks.forEach(
-        link => {
-
-            link.classList.remove(
-                "active"
-            );
-
-
-            const href =
-                link.getAttribute(
-                    "href"
-                );
-
-
-            if (
-                href ===
-                `#${currentSection}`
-            ) {
-
-                link.classList.add(
-                    "active"
-                );
-
-            }
-
-        }
-    );
-
+function closeNavigation() {
+    navLinks.classList.remove("open");
+    mobileMenuButton.setAttribute("aria-expanded", "false");
+    mobileMenuButton.setAttribute("aria-label", "Open navigation menu");
 }
 
+function showPage(moveFocus = false) {
+    const requested = location.hash.slice(1) || "home";
+    const active = panels.find(panel => panel.id === requested) || panels[0];
+    panels.forEach(panel => { panel.hidden = panel !== active; });
+    navigationLinks.forEach(link => {
+        const selected = link.hash === `#${active.id}`;
+        link.classList.toggle("active", selected);
+        if (selected) link.setAttribute("aria-current", "page");
+        else link.removeAttribute("aria-current");
+    });
+    document.title = `${navigationLinks.find(link => link.hash === `#${active.id}`).textContent} | Ran Chen`;
+    closeNavigation();
+    closeProjectModal();
+    if (moveFocus) active.focus({ preventScroll: true });
+    window.scrollTo({ top: 0, behavior: "instant" });
+}
 
-window.addEventListener(
-    "scroll",
-    updateActiveNavigation
-);
+document.addEventListener("click", event => {
+    const link = event.target.closest('a[href^="#"]');
+    if (!link || event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    if (!panels.some(panel => `#${panel.id}` === link.hash)) return;
+    event.preventDefault();
+    if (location.hash !== link.hash) history.pushState(null, "", link.hash);
+    showPage(true);
+});
+window.addEventListener("hashchange", () => showPage(true));
+window.addEventListener("popstate", () => showPage(true));
+mobileMenuButton.addEventListener("click", () => {
+    const open = navLinks.classList.contains("open");
+    mobileMenuButton.setAttribute("aria-expanded", String(open));
+    mobileMenuButton.setAttribute("aria-label", open ? "Close navigation menu" : "Open navigation menu");
+});
+document.addEventListener("keydown", event => {
+    if (event.key === "Escape" && navLinks.classList.contains("open")) {
+        closeNavigation();
+        mobileMenuButton.focus();
+    }
+});
+showPage();
 
-
+/* HOME PROFILE */
+document.getElementById("profileDescription").textContent = profile.description;
+const portrait = document.getElementById("profilePhoto");
+const portraitPlaceholder = document.getElementById("photoPlaceholder");
+portrait.addEventListener("load", () => {
+    portrait.hidden = false;
+    portraitPlaceholder.hidden = true;
+});
+portrait.addEventListener("error", () => {
+    portrait.hidden = true;
+    portraitPlaceholder.hidden = false;
+});
+if (profile.photo) {
+    portrait.alt = profile.photoAlt;
+    portrait.src = profile.photo;
+}
 
 /* ============================================================
    CURRENT YEAR

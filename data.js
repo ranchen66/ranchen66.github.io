@@ -1,3 +1,10 @@
+/* HOME PROFILE — set photo to a local image path, e.g. "assets/ran-chen.jpg". */
+const profile = {
+    photo: "",
+    photoAlt: "Portrait of Ran Chen",
+    description: "I am an engineering student at the University of Illinois Urbana-Champaign interested in fluid mechanics, scientific computing, and experimental research. I enjoy bringing mathematics, physics, and computation together to understand complex physical systems."
+};
+
 /* ============================================================
    WEBSITE CONTENT
 
