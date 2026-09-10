@@ -2,7 +2,7 @@
 const profile = {
     photo: "",
     photoAlt: "Portrait of Ran Chen",
-    description: "I am an engineering student at the University of Illinois Urbana-Champaign interested in fluid mechanics, scientific computing, and experimental research. I enjoy bringing mathematics, physics, and computation together to understand complex physical systems."
+    description: "I am an Aerospace Engineering undergraduate at the University of Illinois Urbana-Champaign, graduating in May 2028. My work spans microfluidic experiments, machine learning for turbulent flows, and aircraft design. I also help students develop their CAD skills as a course assistant for ME 170."
 };
 
 /* ============================================================
@@ -23,7 +23,6 @@ const profile = {
 ============================================================ */
 
 const projects = [
-
     {
         title: "Viscoelastic Flow & Elastoinertial Turbulence",
 
@@ -47,78 +46,60 @@ const projects = [
         contribution:
             "Implemented and analyzed simulation workflows, examined nondimensional parameter definitions, reproduced reference flow conditions, processed numerical results, and investigated three-dimensional perturbation growth."
     },
-
-
-    {
-        title: "Fiber Dynamics in Microfluidic Multiphase Flow",
-
-        category: "EXPERIMENTAL FLUID MECHANICS",
-
-        description:
-            "Experimental study of flexible fiber motion inside liquid-liquid microfluidic flow.",
-
-        tags: [
-            "Microfluidics",
-            "Multiphase Flow",
-            "Python",
-            "Image Analysis",
-            "Experiments"
-        ],
-
-        overview:
-            "This project examines the motion of slender fibers transported through a microfluidic channel containing multiphase flow structures. Experimental observations are compared against expected velocity profiles and fluid-mechanical models.",
-
-        contribution:
-            "Designed experimental analysis workflows, processed high-speed imaging data, tracked fiber motion, calculated velocity and acceleration, and compared measured trajectories with theoretical channel-flow predictions."
-    },
-
-
-    {
-        title: "Reduced-Order Modeling of Fluid Flow",
-
-        category: "SCIENTIFIC MACHINE LEARNING",
-
-        description:
-            "Data-driven reduced-order modeling of high-dimensional fluid systems using neural networks.",
-
-        tags: [
-            "Machine Learning",
-            "PyTorch",
-            "CNN",
-            "ROM",
-            "Python"
-        ],
-
-        overview:
-            "This project explores reduced representations of high-dimensional flow-field data using neural-network-based dimensionality reduction and dynamical modeling.",
-
-        contribution:
-            "Worked with large simulation datasets, neural-network architectures, latent representations, symmetry handling, and post-processing pipelines for fluid-dynamics applications."
-    },
-
-
-    {
-        title: "Engineering Design & CAD",
-
-        category: "ENGINEERING DESIGN",
-
-        description:
-            "Mechanical design projects involving parametric CAD, manufacturability, tolerancing, and engineering communication.",
-
-        tags: [
-            "CAD",
-            "GD&T",
-            "Mechanical Design",
-            "Manufacturing"
-        ],
-
-        overview:
-            "A collection of mechanical engineering design work covering CAD modeling, engineering drawings, tolerancing, fit selection, and design-for-manufacturing considerations.",
-
-        contribution:
-            "Created parametric models and engineering drawings while applying dimensional constraints, tolerances, fit requirements, and manufacturing considerations."
-    }
-
+{
+    "title": "Fiber Bridging in Microfluidic Flow",
+    "category": "EXPERIMENTAL FLUID MECHANICS",
+    "description": "Research Assistant, Institute for Nano- and Microfluidics, Technische Universität Darmstadt, Germany. May 2026–present.",
+    "tags": [
+        "Microfluidics",
+        "Experiments",
+        "Image Analysis",
+        "Physical Modeling"
+    ],
+    "overview": "Investigation of fiber bridging in a fiber-laden T-junction experiment, combining microfluidic fabrication, analytical modeling, and image analysis.",
+    "contribution": "Designed a novel fiber-laden T-junction experiment using a PMMA microfluidic plate and solvent bonding. Established an analytical physical model for the observed bridging phenomenon and developed an image analysis workflow to cross-validate the model."
+},
+{
+    "title": "Machine Learning for Transitional Flow",
+    "category": "SCIENTIFIC MACHINE LEARNING",
+    "description": "Research Assistant, Complex Fluids and Turbulence Laboratory, University of Illinois Urbana-Champaign. January 2025–present.",
+    "tags": [
+        "3D CNN",
+        "POD",
+        "Autoencoders",
+        "Neural ODE",
+        "Fluid Mechanics"
+    ],
+    "overview": "Development of machine learning methods for feature detection and the identification of exact coherent states in transitional plane Poiseuille flow.",
+    "contribution": "Designed a 3D convolutional neural network with dense blocks for feature detection. Developed a methodology to identify exact coherent states using proper orthogonal decomposition and an implicit rank-minimizing autoencoder with a neural ODE."
+},
+{
+    "title": "Design, Build, Fly",
+    "category": "AIRCRAFT DESIGN",
+    "description": "Team member, University of Illinois Urbana-Champaign. September 2024–September 2025.",
+    "tags": [
+        "Aircraft Design",
+        "CAD",
+        "Aerodynamics",
+        "Lightweight Design"
+    ],
+    "overview": "Collaborative aircraft design for competition, with an emphasis on lightweight parts and aerodynamic performance.",
+    "contribution": "Designed and improved aircraft parts with attention to weight and aerodynamics. Participated in CAD design meetings and provided feedback for team evaluation."
+},
+{
+    "title": "ME 170 — Computer-Aided Design",
+    "category": "TEACHING EXPERIENCE",
+    "description": "Course Assistant, University of Illinois Urbana-Champaign. September 2025–present.",
+    "tags": [
+        "Fusion 360",
+        "CAD",
+        "ASME",
+        "ISO",
+        "PrairieLearn"
+    ],
+    "overview": "Supporting engineering students in computer-aided design, technical standards, and conceptual understanding.",
+    "contribution": "Provided weekly teaching support in Fusion 360 and ASME/ISO standards. Developed conceptual questions and rebuilt course content on PrairieLearn."
+}
 ];
 
 
@@ -496,42 +477,36 @@ and paste it into the courses array above.
 ============================================================ */
 
 const awards = [
-
     {
-        year: "2026",
-
-        title: "Award / Scholarship Name",
-
-        organization: "University or Organization",
-
-        description:
-            "Replace this with a short description of the award, scholarship, competition, or academic recognition."
+        "year": "2026",
+        "title": "Scholarship of Excellence",
+        "organization": "",
+        "description": "Awarded EUR 3,099."
     },
-
-
     {
-        year: "2026",
-
-        title: "Research Recognition",
-
-        organization: "University of Illinois Urbana-Champaign",
-
-        description:
-            "Replace this entry with one of your research awards, presentations, scholarships, fellowships, or other academic achievements."
+        "year": "2026",
+        "title": "Illinois for Illinois Scholarship",
+        "organization": "",
+        "description": "Awarded USD 2,000."
     },
-
-
     {
-        year: "2025",
-
-        title: "Academic Recognition",
-
-        organization: "University / Organization",
-
-        description:
-            "Add additional awards here by copying this object in data.js."
+        "year": "2025–2026",
+        "title": "Tan Family Education Foundation Scholarship",
+        "organization": "Tan Family Education Foundation",
+        "description": "Awarded USD 10,000 in 2025 and USD 3,000 in 2026."
+    },
+    {
+        "year": "2024–2026",
+        "title": "Dean’s List",
+        "organization": "University of Illinois Urbana-Champaign",
+        "description": "Recognized in Fall 2024, Spring 2025, Fall 2025, and Spring 2026."
+    },
+    {
+        "year": "2023",
+        "title": "Top Gold — British Physics Olympic",
+        "organization": "",
+        "description": "Received the Top Gold award in 2023."
     }
-
 ];
 
 
@@ -615,7 +590,10 @@ const skillGroups = [
             "Mechanical Design",
             "GD&T",
             "Experimental Methods",
-            "Technical Communication"
+            "Technical Communication",
+            "Fusion 360",
+            "Siemens NX",
+            "LaTeX"
         ]
     }
 
