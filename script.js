@@ -420,105 +420,80 @@ const courseFilters =
     );
 
 
-function renderCourses(category = "All") {
+const courseSortButtons = [...document.querySelectorAll(".course-sort")];
+const courseView = { category: "All", key: "semester", direction: 1 };
+const courseCollator = new Intl.Collator("en", { numeric: true, sensitivity: "base" });
+const gradeOrder = ["F", "D-", "D", "D+", "C-", "C", "C+", "B-", "B", "B+", "A-", "A", "A+"];
+const gradeLabels = { "A": "A — 4.00 grade points", "A+": "A+ — 4.00 grade points", "A+H": "A+ with honors credit", "IP": "In progress", "DFR": "Grade temporarily deferred" };
 
-    courseTableBody.innerHTML =
-        "";
-
-
-    const filteredCourses =
-        category === "All"
-
-            ? courses
-
-            : courses.filter(
-                course =>
-                    course.category === category
-            );
-
-
-    filteredCourses.forEach(
-        course => {
-
-            const row =
-                document.createElement(
-                    "tr"
-                );
-
-
-            row.innerHTML = `
-
-                <td class="course-code">
-                    ${course.code}
-                </td>
-
-                <td>
-                    ${course.title}
-                </td>
-
-                <td>
-                    ${course.semester}
-                </td>
-
-                <td>
-                    ${course.category}
-                </td>
-
-                <td class="grade">
-                    ${course.grade}
-                </td>
-
-            `;
-
-
-            courseTableBody.appendChild(
-                row
-            );
-
-        }
-    );
-
-
-    courseCount.textContent =
-        courses.length;
-
+function semesterValue(term) {
+    const year = Number(term.match(/\d{4}/)?.[0] || 0);
+    const season = { Winter: 0, Spring: 1, Summer: 2, Fall: 3 }[term.split(" ")[0]] ?? 4;
+    return year * 5 + season;
 }
 
+function compareCourses(a, b) {
+    const { key, direction } = courseView;
+    let comparison;
+    if (key === "semester") comparison = semesterValue(a.semester) - semesterValue(b.semester);
+    else if (key === "grade") {
+        const gradeA = gradeOrder.indexOf(a.grade.replace(/H$/, ""));
+        const gradeB = gradeOrder.indexOf(b.grade.replace(/H$/, ""));
+        // Pending statuses stay below completed grades in either direction.
+        if ((gradeA < 0) !== (gradeB < 0)) return gradeA < 0 ? 1 : -1;
+        comparison = gradeA < 0 ? courseCollator.compare(a.grade, b.grade) : gradeA - gradeB;
+    } else comparison = courseCollator.compare(a[key], b[key]);
+    return comparison * direction;
+}
 
+function renderCourses(category = courseView.category) {
+    courseView.category = category;
+    const rows = courses.filter(course => category === "All" || course.category === category).sort(compareCourses);
+    courseTableBody.innerHTML = "";
+    rows.forEach(course => {
+        const row = document.createElement("tr");
+        ["code", "title", "semester", "category", "grade"].forEach(key => {
+            const cell = document.createElement("td");
+            if (key === "code") cell.className = "course-code";
+            if (key === "grade") {
+                const badge = document.createElement("span");
+                badge.className = "grade-badge" + (course.grade.endsWith("H") ? " honors" : course.grade === "IP" ? " pending" : course.grade === "DFR" ? " deferred" : "");
+                badge.textContent = course.grade;
+                badge.title = gradeLabels[course.grade] || course.grade;
+                badge.setAttribute("aria-label", gradeLabels[course.grade] || course.grade);
+                cell.appendChild(badge);
+            } else cell.textContent = course[key];
+            row.appendChild(cell);
+        });
+        courseTableBody.appendChild(row);
+    });
+    courseCount.textContent = courses.length;
+    courseSortButtons.forEach(button => {
+        const active = button.dataset.sort === courseView.key;
+        const order = courseView.direction === 1 ? "ascending" : "descending";
+        button.closest("th").setAttribute("aria-sort", active ? order : "none");
+        button.querySelector("span").textContent = active ? (courseView.direction === 1 ? "↑" : "↓") : "↕";
+    });
+    const label = courseSortButtons.find(button => button.dataset.sort === courseView.key).childNodes[0].textContent;
+    document.getElementById("courseSortStatus").textContent = `${rows.length} of ${courses.length} courses · ${label}, ${courseView.direction === 1 ? "ascending" : "descending"}`;
+}
+
+courseSortButtons.forEach(button => button.addEventListener("click", () => {
+    const key = button.dataset.sort;
+    courseView.direction = courseView.key === key ? -courseView.direction : key === "grade" ? -1 : 1;
+    courseView.key = key;
+    renderCourses();
+}));
+courseFilters.forEach(button => button.addEventListener("click", () => {
+    courseFilters.forEach(filter => {
+        const active = filter === button;
+        filter.classList.toggle("active", active);
+        filter.setAttribute("aria-pressed", String(active));
+    });
+    renderCourses(button.dataset.category);
+}));
+courseFilters.forEach(button => button.setAttribute("aria-pressed", String(button.classList.contains("active"))));
 renderCourses();
-
-
-courseFilters.forEach(
-    button => {
-
-        button.addEventListener(
-            "click",
-            () => {
-
-                courseFilters.forEach(
-                    filter =>
-                        filter.classList.remove(
-                            "active"
-                        )
-                );
-
-
-                button.classList.add(
-                    "active"
-                );
-
-
-                renderCourses(
-                    button.dataset.category
-                );
-
-            }
-        );
-
-    }
-);
-
-
 
 /* ============================================================
    AWARDS

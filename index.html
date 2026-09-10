@@ -53,7 +53,6 @@
 
             <div class="nav-links" id="navLinks">
                 <a href="#home" id="nav-home">Home</a>
-                <a href="#about" id="nav-about">About</a>
                 <a href="#education" id="nav-education">Education</a>
                 <a href="#projects" id="nav-projects">Research</a>
                 <a href="#courses" id="nav-courses">Courses</a>
@@ -220,111 +219,6 @@
 
 
         <!-- =====================================================
-             ABOUT
-        ====================================================== -->
-
-        <section id="about" class="section page-panel" tabindex="-1" aria-labelledby="nav-about">
-
-            <div class="container">
-
-                <div class="section-heading reveal">
-
-                    <p class="section-number">
-                        01 / ABOUT
-                    </p>
-
-                    <h2>
-                        Engineer. Researcher.
-                        <span>Problem solver.</span>
-                    </h2>
-
-                </div>
-
-
-                <div class="about-grid">
-
-                    <div class="about-main reveal">
-
-                        <p class="about-lead">
-                            I am an Aerospace Engineering undergraduate at the University of Illinois Urbana-Champaign, with a 4.00/4.00 GPA and expected graduation in May 2028.
-                        </p>
-
-                        <p>
-                            My interests span fluid mechanics, computational
-                            fluid dynamics, multiphase systems, scientific
-                            computing, high-performance computing, and
-                            data-driven modeling.
-                        </p>
-
-                        <p>
-                            I enjoy problems where mathematics, physics,
-                            computation, and engineering design meet.
-                        </p>
-
-                    </div>
-
-
-                    <div class="about-details reveal">
-
-                        <div class="detail-item">
-
-                            <span class="detail-label">
-                                LOCATION
-                            </span>
-
-                            <span class="detail-value">
-                                Champaign, Illinois
-                            </span>
-
-                        </div>
-
-                        <div class="detail-item">
-
-                            <span class="detail-label">
-                                FIELD
-                            </span>
-
-                            <span class="detail-value">
-                                Aerospace Engineering
-                            </span>
-
-                        </div>
-
-                        <div class="detail-item">
-
-                            <span class="detail-label">
-                                INTERESTS
-                            </span>
-
-                            <span class="detail-value">
-                                Fluid Mechanics · CFD · Scientific Computing
-                            </span>
-
-                        </div>
-
-                        <div class="detail-item">
-
-                            <span class="detail-label">
-                                CURRENTLY
-                            </span>
-
-                            <span class="detail-value">
-                                Research &amp; Teaching
-                            </span>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =====================================================
              EDUCATION
         ====================================================== -->
 
@@ -335,7 +229,7 @@
                 <div class="section-heading reveal">
 
                     <p class="section-number">
-                        02 / EDUCATION
+                        01 / EDUCATION
                     </p>
 
                     <h2>
@@ -417,7 +311,7 @@
                 <div class="section-heading reveal">
 
                     <p class="section-number">
-                        03 / RESEARCH & PROJECTS
+                        02 / RESEARCH & PROJECTS
                     </p>
 
                     <h2>
@@ -456,7 +350,7 @@
                 <div class="section-heading reveal">
 
                     <p class="section-number">
-                        04 / COURSEWORK
+                        03 / COURSEWORK
                     </p>
 
                     <h2>
@@ -526,12 +420,27 @@
                         Computing
                     </button>
 
+                    <button class="course-filter" data-category="Humanities">Humanities</button>
                     <button class="course-filter" data-category="Science">
                         Science
                     </button>
 
                 </div>
 
+
+
+                <details class="course-guide reveal" open>
+                    <summary><span>Reading the course record</span><span class="guide-hint">Grades &amp; labels</span></summary>
+                    <div class="grade-key">
+                        <div><span class="grade-badge">A / A+</span><strong>Letter grades</strong><p>Both carry 4.00 grade points at Illinois.</p></div>
+                        <div><span class="grade-badge honors">H</span><strong>Honors credit</strong><p>Appended to a grade: A+H means A+ with honors credit.</p></div>
+                        <div><span class="grade-badge pending">IP</span><strong>In progress</strong><p>Used here for courses underway; a final grade is pending.</p></div>
+                        <div><span class="grade-badge deferred">DFR</span><strong>Deferred grade</strong><p>The grade is temporarily deferred, rather than a final letter grade.</p></div>
+                    </div>
+                    <div class="category-key"><strong>Subject groups</strong><p>Engineering · applied engineering and design &nbsp; / &nbsp; Math · mathematics &nbsp; / &nbsp; Computing · computer science &nbsp; / &nbsp; Science · physics and chemistry &nbsp; / &nbsp; Humanities · language, culture, arts, and general studies</p></div>
+                    <p class="guide-note">Course identifies the subject and number; Title names the course; Semester gives its term and year. AE = Aerospace Engineering; GPA = grade point average. <a href="https://registrar.illinois.edu/courses-grades/explanation-of-grades/" target="_blank" rel="noopener noreferrer">Illinois grade guide ↗</a></p>
+                </details>
+                <div class="course-table-help"><p>Sort by any column; select it again to reverse the order.</p><p id="courseSortStatus" role="status" aria-live="polite"></p></div>
 
                 <div class="course-table-container reveal">
 
@@ -540,11 +449,11 @@
                         <thead>
 
                             <tr>
-                                <th>Course</th>
-                                <th>Title</th>
-                                <th>Semester</th>
-                                <th>Category</th>
-                                <th>Grade</th>
+                                <th scope="col" aria-sort="none"><button class="course-sort" data-sort="code">Course<span aria-hidden="true">↕</span></button></th>
+                                <th scope="col" aria-sort="none"><button class="course-sort" data-sort="title">Title<span aria-hidden="true">↕</span></button></th>
+                                <th scope="col" aria-sort="none"><button class="course-sort" data-sort="semester">Semester<span aria-hidden="true">↕</span></button></th>
+                                <th scope="col" aria-sort="none"><button class="course-sort" data-sort="category">Category<span aria-hidden="true">↕</span></button></th>
+                                <th scope="col" aria-sort="none"><button class="course-sort" data-sort="grade">Grade<span aria-hidden="true">↕</span></button></th>
                             </tr>
 
                         </thead>
@@ -576,7 +485,7 @@
                 <div class="section-heading reveal">
 
                     <p class="section-number">
-                        05 / AWARDS
+                        04 / AWARDS
                     </p>
 
                     <h2>
@@ -610,7 +519,7 @@
                 <div class="section-heading reveal">
 
                     <p class="section-number">
-                        06 / SKILLS
+                        05 / SKILLS
                     </p>
 
                     <h2>
@@ -646,7 +555,7 @@
                     <div>
 
                         <p class="section-number">
-                            07 / CURRICULUM VITAE
+                            06 / CURRICULUM VITAE
                         </p>
 
                         <h2>
@@ -706,7 +615,7 @@
                 <div class="contact-content reveal">
 
                     <p class="section-number">
-                        08 / CONTACT
+                        07 / CONTACT
                     </p>
 
                     <h2>

@@ -3020,3 +3020,25 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
     .hero-visual { width: 440px; justify-self: center; }
 }
 .hero-visual { overflow: clip; }
+
+/* Course sorting and record guide */
+.course-sort { display: flex; align-items: center; gap: 12px; width: 100%; padding: 8px 0; border: 0; background: transparent; color: inherit; font: inherit; text-transform: inherit; letter-spacing: inherit; cursor: pointer; text-align: left; }
+.course-sort span { color: var(--text-secondary); font-size: 1rem; }
+th[aria-sort="ascending"] .course-sort, th[aria-sort="descending"] .course-sort { color: var(--accent); }
+.course-guide { margin: 0 0 26px; border: 1px solid var(--border); border-radius: 18px; background: var(--surface); overflow: hidden; }
+.course-guide summary { padding: 20px 24px; cursor: pointer; font-weight: 700; }
+.guide-hint { float: right; font-size: .75rem; color: var(--text-secondary); font-weight: 400; }
+.grade-key { display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; padding: 4px 24px 24px; }
+.grade-key strong { display: block; margin: 12px 0 4px; font-size: .86rem; }
+.grade-key p, .category-key p, .guide-note { font-size: .8rem; color: var(--text-secondary); line-height: 1.7; }
+.grade-badge { display: inline-flex; justify-content: center; min-width: 46px; padding: 4px 10px; border: 1px solid var(--border); border-radius: 8px; background: var(--accent-glow); color: var(--accent); font-family: "JetBrains Mono", monospace; font-size: .75rem; font-weight: 600; white-space: nowrap; }
+.grade-badge.honors { color: var(--accent-secondary); background: rgba(124,92,255,.1); }
+.grade-badge.pending { color: var(--text-secondary); background: var(--bg-alt); border-style: dashed; }
+.grade-badge.deferred { color: var(--text); background: var(--bg-alt); }
+.category-key { padding: 18px 24px; border-top: 1px solid var(--border); }
+.category-key strong { font-size: .8rem; }
+.guide-note { padding: 0 24px 22px; }
+.guide-note a { color: var(--accent); text-decoration: underline; }
+.course-table-help { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin: 0 0 14px; font-size: .75rem; color: var(--text-secondary); }
+@media (max-width: 900px) { .grade-key { grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 480px) { .grade-key { grid-template-columns: 1fr; } .guide-hint { display: none; } }
