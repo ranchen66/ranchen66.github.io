@@ -118,19 +118,6 @@ const projects = [
 
 const courses = [
 
-    // =========================================================
-    // SUMMER 2022 — JOHNS HOPKINS UNIVERSITY
-    // =========================================================
-
-    {
-        code: "ENG 1--",
-        title: "Engineering Elective",
-        semester: "Summer 2022",
-        category: "Engineering",
-        grade: "A",
-        credits: 3
-    },
-
 
     // =========================================================
     // FALL 2024
