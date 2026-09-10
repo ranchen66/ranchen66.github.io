@@ -480,13 +480,14 @@ const awards = [
     {
         "year": "2026",
         "title": "Scholarship of Excellence",
-        "organization": "",
+        "organization": "Technische Universität Darmstadt
+",
         "description": "Awarded EUR 3,099."
     },
     {
         "year": "2026",
         "title": "Illinois for Illinois Scholarship",
-        "organization": "",
+        "organization": "University of Illinois Urbana-Champaign",
         "description": "Awarded USD 2,000."
     },
     {
