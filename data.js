@@ -130,44 +130,335 @@ const projects = [
 
 const courses = [
 
+    // =========================================================
+    // SUMMER 2022 — JOHNS HOPKINS UNIVERSITY
+    // =========================================================
+
     {
-        code: "MATH 241",
-        title: "Calculus III",
-        semester: "Fall 2025",
-        category: "Math",
-        grade: "A"
+        code: "ENG 1--",
+        title: "Engineering Elective",
+        semester: "Summer 2022",
+        category: "Engineering",
+        grade: "A",
+        credits: 3
+    },
+
+
+    // =========================================================
+    // FALL 2024
+    // =========================================================
+
+    {
+        code: "CHEM 102",
+        title: "General Chemistry I",
+        semester: "Fall 2024",
+        category: "Science",
+        grade: "A+",
+        credits: 3
     },
 
     {
-        code: "MATH 257",
-        title: "Linear Algebra with Computational Applications",
-        semester: "Spring 2026",
-        category: "Math",
-        grade: "A"
+        code: "CHEM 103",
+        title: "General Chemistry Lab I",
+        semester: "Fall 2024",
+        category: "Science",
+        grade: "A+",
+        credits: 1
     },
+
+    {
+        code: "ENG 100",
+        title: "Engineering Orientation",
+        semester: "Fall 2024",
+        category: "Engineering",
+        grade: "A",
+        credits: 1
+    },
+
+    {
+        code: "ENG 101",
+        title: "Engineering at Illinois",
+        semester: "Fall 2024",
+        category: "Engineering",
+        grade: "A",
+        credits: 1
+    },
+
+    {
+        code: "FR 156",
+        title: "Exploring Paris",
+        semester: "Fall 2024",
+        category: "Humanities",
+        grade: "A+",
+        credits: 3
+    },
+
+    {
+        code: "MATH 231",
+        title: "Calculus II",
+        semester: "Fall 2024",
+        category: "Math",
+        grade: "A",
+        credits: 3
+    },
+
+    {
+        code: "MATH 299",
+        title: "Topics in Mathematics",
+        semester: "Fall 2024",
+        category: "Math",
+        grade: "A",
+        credits: 1
+    },
+
+    {
+        code: "ME 170",
+        title: "Computer-Aided Design",
+        semester: "Fall 2024",
+        category: "Engineering",
+        grade: "A+",
+        credits: 3
+    },
+
+
+    // =========================================================
+    // SPRING 2025
+    // =========================================================
 
     {
         code: "CS 101",
-        title: "Introduction to Computing",
-        semester: "Spring 2026",
+        title: "Intro Computing: Engineering & Science",
+        semester: "Spring 2025",
         category: "Computing",
-        grade: "A"
+        grade: "A+H",
+        credits: 3
+    },
+
+    {
+        code: "MATH 241",
+        title: "Calculus III",
+        semester: "Spring 2025",
+        category: "Math",
+        grade: "A+",
+        credits: 4
+    },
+
+    {
+        code: "ME 297",
+        title: "Intro Independent Study",
+        semester: "Spring 2025",
+        category: "Engineering",
+        grade: "A+",
+        credits: 3
+    },
+
+    {
+        code: "MUS 133",
+        title: "Introduction to World Music",
+        semester: "Spring 2025",
+        category: "Humanities",
+        grade: "A",
+        credits: 3
     },
 
     {
         code: "PHYS 211",
         title: "University Physics: Mechanics",
-        semester: "Fall 2025",
+        semester: "Spring 2025",
         category: "Science",
-        grade: "A"
+        grade: "A+",
+        credits: 4
     },
 
     {
-        code: "ME XXX",
-        title: "Engineering Course",
+        code: "RHET 105",
+        title: "Writing and Research",
+        semester: "Spring 2025",
+        category: "Humanities",
+        grade: "A",
+        credits: 4
+    },
+
+
+    // =========================================================
+    // FALL 2025
+    // =========================================================
+
+    {
+        code: "MATH 257",
+        title: "Linear Algebra with Computational Applications",
+        semester: "Fall 2025",
+        category: "Math",
+        grade: "A+",
+        credits: 3
+    },
+
+    {
+        code: "MSE 280",
+        title: "Engineering Materials",
+        semester: "Fall 2025",
+        category: "Engineering",
+        grade: "A+",
+        credits: 3
+    },
+
+    {
+        code: "PHYS 212",
+        title: "University Physics: Electricity & Magnetism",
+        semester: "Fall 2025",
+        category: "Science",
+        grade: "A+",
+        credits: 4
+    },
+
+    {
+        code: "SHS 222",
+        title: "Language & Culture of Deaf Communities",
+        semester: "Fall 2025",
+        category: "Humanities",
+        grade: "A+H",
+        credits: 3
+    },
+
+    {
+        code: "TAM 211",
+        title: "Statics",
+        semester: "Fall 2025",
+        category: "Engineering",
+        grade: "A",
+        credits: 3
+    },
+
+    {
+        code: "TAM 497",
+        title: "Independent Study",
+        semester: "Fall 2025",
+        category: "Engineering",
+        grade: "A",
+        credits: 3
+    },
+
+
+    // =========================================================
+    // SPRING 2026
+    // =========================================================
+
+    {
+        code: "AE 202",
+        title: "Aerospace Flight Mechanics",
+        semester: "Spring 2026",
+        category: "Engineering",
+        grade: "A+",
+        credits: 3
+    },
+
+    {
+        code: "AE 311",
+        title: "Incompressible Flow",
+        semester: "Spring 2026",
+        category: "Engineering",
+        grade: "A+",
+        credits: 3
+    },
+
+    {
+        code: "LAS 291",
+        title: "Global Perspectives — Pre-Departure",
+        semester: "Spring 2026",
+        category: "Humanities",
+        grade: "A+",
+        credits: 1
+    },
+
+    {
+        code: "MATH 285",
+        title: "Intro Differential Equations",
+        semester: "Spring 2026",
+        category: "Math",
+        grade: "A+",
+        credits: 3
+    },
+
+    {
+        code: "ME 297",
+        title: "Intro Independent Study",
+        semester: "Spring 2026",
+        category: "Engineering",
+        grade: "A+",
+        credits: 3
+    },
+
+    {
+        code: "TAM 212",
+        title: "Introductory Dynamics",
+        semester: "Spring 2026",
+        category: "Engineering",
+        grade: "A+",
+        credits: 3
+    },
+
+
+    // =========================================================
+    // SUMMER 2026
+    // =========================================================
+
+    {
+        code: "ENG 299",
+        title: "Engineering Study Abroad",
+        semester: "Summer 2026",
+        category: "Engineering",
+        grade: "DFR",
+        credits: 6
+    },
+
+
+    // =========================================================
+    // FALL 2026 — CURRENTLY IN PROGRESS
+    // =========================================================
+
+    {
+        code: "AE 312",
+        title: "Compressible Flow",
         semester: "Fall 2026",
         category: "Engineering",
-        grade: "IP"
+        grade: "IP",
+        credits: 3
+    },
+
+    {
+        code: "AE 321",
+        title: "Mechanics of Aerospace Structures",
+        semester: "Fall 2026",
+        category: "Engineering",
+        grade: "IP",
+        credits: 3
+    },
+
+    {
+        code: "AE 352",
+        title: "Aerospace Dynamical Systems",
+        semester: "Fall 2026",
+        category: "Engineering",
+        grade: "IP",
+        credits: 3
+    },
+
+    {
+        code: "LAS 292",
+        title: "Global Perspectives — Abroad",
+        semester: "Fall 2026",
+        category: "Humanities",
+        grade: "IP",
+        credits: 2
+    },
+
+    {
+        code: "ME 200",
+        title: "Thermodynamics",
+        semester: "Fall 2026",
+        category: "Engineering",
+        grade: "IP",
+        credits: 3
     }
 
 ];
